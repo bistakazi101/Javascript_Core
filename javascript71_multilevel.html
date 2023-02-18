@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //javascript multilevel prototype inheritance
+        function Mobile() {
+        }
+        Mobile.prototype.Model = "90 sets of mobile";
+
+        function samsung() {
+            Mobile.call(this);
+        }
+        samsung.prototype.no = "Galaxy";
+
+        function Galaxy1() {
+            samsung.call(this);
+        }
+        samsung.prototype = Object.create(Mobile.prototype);
+        samsung.prototype.constructor=samsung;
+        Galaxy1.prototype = Object.create(samsung.prototype);
+        Galaxy1.prototype.constructor=Galaxy1;
+
+        var samsung_no = new samsung();
+        var Galaxy_no = new Galaxy1();
+        document.write("<br>Model number is ", Galaxy_no.Model);
+        document.write("<br>Model number is ", Galaxy_no.no);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

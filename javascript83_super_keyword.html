@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //super keyword
+        class father {
+            constructor(money) {
+                this.fmoney = money;
+            }
+            display() {
+                return ("I am here to display father money: "+ this.fmoney);
+            }
+        }
+        class son extends father {
+            constructor(money) { 
+            super(money);
+            }
+            display1() {
+                return "I am here to display the son money";
+            }
+        }
+        var ram = new son("rs5000");
+        document.write(ram.display());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

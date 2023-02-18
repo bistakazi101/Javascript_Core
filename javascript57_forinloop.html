@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //for in loop
+        function Const(Model_no) {
+            this.Model = Model_no;
+            this.Color = "red";
+            this.Ram = "4gb";
+            this.Price = function () {
+                return "Price of the Mobile phone is rs 10000";
+
+            }
+        }
+        var samsung = new Const("Galaxy");
+        var Nokia = new Const("Nokia");
+        for (var specs in samsung) {
+            document.write(samsung[specs]);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

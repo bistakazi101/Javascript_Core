@@ -1,0 +1,1 @@
+//prototype use in javascript

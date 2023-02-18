@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //ways of creating objects
+
+//1)object literal
+var obj1={};
+obj1["fees"]= 200;
+document.write(obj1.fees);
+
+//2)declare and initialize obj literal
+var obj2={
+    model:"5100",
+    color:"red",
+    specs:"5g"
+}
+document.write("<br> color of model is ",obj2.color);
+
+//object using factory function
+function Mobile()
+{
+    return{
+        model:"galaxy",
+        color: "blue"
+    }   
+}
+var samsung= Mobile();
+document.write("<br>Model no  is ",samsung.model);
+
+//4)object using constructor
+function Const()
+{
+    this.model= "mobile1";
+    this.color="yellow";
+    this.price="5100";
+}
+var Mobile= new Const();
+document.write("<br> mobile price ",Mobile.price);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
