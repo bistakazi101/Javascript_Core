@@ -27,3 +27,5 @@ showMe(); // a hoisting example
 function showMe(){
     console.log('an hoisting example');
 }
+// Note  javascript implectly provides you undefined unless you provide explectively 
+// provides the return value 
