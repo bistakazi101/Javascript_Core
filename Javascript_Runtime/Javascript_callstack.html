@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Function Example</title>
+</head>
+<body>
+    <script>
+        <!--
+            There are two types of execution contexts in JavaScript:
+             Global Execution Context
+             Function Execution Context
+    
+            JavaScript is single-threaded and has only one call stack.
+            to work asynchronously we use event loop
+        -->
+        function calculateArea(length, width) {
+            return length * width;
+        }
+
+        // Function to double the area
+        function doubleArea(length, width) {
+            let area = calculateArea(length, width);
+            return area * 2;
+        }
+
+        // Example usage
+        let length = 5;
+        let width = 10;
+        let doubledArea = doubleArea(length, width);
+        
+        console.log(`The doubled area of the rectangle is: ${doubledArea}`);
+    </script>
+</body>
+</html>
